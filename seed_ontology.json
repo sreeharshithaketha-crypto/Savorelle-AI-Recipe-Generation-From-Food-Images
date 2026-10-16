@@ -1,0 +1,1126 @@
+{
+ "_note": "Seed ontology. allergens = definite conflict. may_contain = label check warning. Substitution options MUST be re-checked by the allergy engine against the user's profile.",
+ "allergens": [
+  {
+   "code": "milk",
+   "label": "Milk"
+  },
+  {
+   "code": "egg",
+   "label": "Egg"
+  },
+  {
+   "code": "peanut",
+   "label": "Peanut"
+  },
+  {
+   "code": "tree_nut",
+   "label": "Tree nuts"
+  },
+  {
+   "code": "gluten",
+   "label": "Cereals containing gluten"
+  },
+  {
+   "code": "soy",
+   "label": "Soy"
+  },
+  {
+   "code": "fish",
+   "label": "Fish"
+  },
+  {
+   "code": "shellfish",
+   "label": "Crustaceans"
+  },
+  {
+   "code": "mollusc",
+   "label": "Molluscs"
+  },
+  {
+   "code": "sesame",
+   "label": "Sesame"
+  },
+  {
+   "code": "mustard",
+   "label": "Mustard"
+  },
+  {
+   "code": "celery",
+   "label": "Celery"
+  },
+  {
+   "code": "sulphites",
+   "label": "Sulphites"
+  },
+  {
+   "code": "lupin",
+   "label": "Lupin"
+  }
+ ],
+ "ingredients": [
+  {
+   "name": "avocado",
+   "category": "fruit",
+   "allergens": [],
+   "may_contain": [],
+   "aliases": []
+  },
+  {
+   "name": "banana",
+   "category": "fruit",
+   "allergens": [],
+   "may_contain": [],
+   "aliases": []
+  },
+  {
+   "name": "berries",
+   "category": "fruit",
+   "allergens": [],
+   "may_contain": [],
+   "aliases": []
+  },
+  {
+   "name": "lemon",
+   "category": "fruit",
+   "allergens": [],
+   "may_contain": [],
+   "aliases": []
+  },
+  {
+   "name": "lemon juice",
+   "category": "liquid",
+   "allergens": [],
+   "may_contain": [],
+   "aliases": []
+  },
+  {
+   "name": "lime",
+   "category": "fruit",
+   "allergens": [],
+   "may_contain": [],
+   "aliases": []
+  },
+  {
+   "name": "lime juice",
+   "category": "liquid",
+   "allergens": [],
+   "may_contain": [],
+   "aliases": []
+  },
+  {
+   "name": "basil",
+   "category": "herb",
+   "allergens": [],
+   "may_contain": [],
+   "aliases": []
+  },
+  {
+   "name": "mint",
+   "category": "herb",
+   "allergens": [],
+   "may_contain": [],
+   "aliases": []
+  },
+  {
+   "name": "parsley",
+   "category": "herb",
+   "allergens": [],
+   "may_contain": [],
+   "aliases": []
+  },
+  {
+   "name": "thyme",
+   "category": "herb",
+   "allergens": [],
+   "may_contain": [],
+   "aliases": []
+  },
+  {
+   "name": "oregano",
+   "category": "herb",
+   "allergens": [],
+   "may_contain": [],
+   "aliases": []
+  },
+  {
+   "name": "cilantro",
+   "category": "herb",
+   "allergens": [],
+   "may_contain": [],
+   "aliases": [
+    "coriander",
+    "coriander leaves"
+   ]
+  },
+  {
+   "name": "herbs",
+   "category": "herb",
+   "allergens": [],
+   "may_contain": [],
+   "aliases": []
+  },
+  {
+   "name": "curry leaves",
+   "category": "herb",
+   "allergens": [],
+   "may_contain": [],
+   "aliases": []
+  },
+  {
+   "name": "rice",
+   "category": "grain",
+   "allergens": [],
+   "may_contain": [],
+   "aliases": [
+    "cooked rice"
+   ]
+  },
+  {
+   "name": "basmati rice",
+   "category": "grain",
+   "allergens": [],
+   "may_contain": [],
+   "aliases": []
+  },
+  {
+   "name": "sushi rice",
+   "category": "grain",
+   "allergens": [],
+   "may_contain": [],
+   "aliases": []
+  },
+  {
+   "name": "oats",
+   "category": "grain",
+   "allergens": [],
+   "may_contain": [
+    "gluten"
+   ],
+   "aliases": []
+  },
+  {
+   "name": "granola",
+   "category": "grain",
+   "allergens": [],
+   "may_contain": [
+    "gluten",
+    "tree_nut",
+    "peanut",
+    "milk"
+   ],
+   "aliases": []
+  },
+  {
+   "name": "bread",
+   "category": "bakery",
+   "allergens": [
+    "gluten"
+   ],
+   "may_contain": [
+    "milk",
+    "egg",
+    "soy",
+    "sesame"
+   ],
+   "aliases": []
+  },
+  {
+   "name": "flatbread",
+   "category": "bakery",
+   "allergens": [
+    "gluten"
+   ],
+   "may_contain": [
+    "milk"
+   ],
+   "aliases": []
+  },
+  {
+   "name": "tortillas",
+   "category": "bakery",
+   "allergens": [
+    "gluten"
+   ],
+   "may_contain": [],
+   "aliases": []
+  },
+  {
+   "name": "pizza dough",
+   "category": "bakery",
+   "allergens": [
+    "gluten"
+   ],
+   "may_contain": [],
+   "aliases": []
+  },
+  {
+   "name": "dumpling wrappers",
+   "category": "bakery",
+   "allergens": [
+    "gluten"
+   ],
+   "may_contain": [
+    "egg"
+   ],
+   "aliases": []
+  },
+  {
+   "name": "flour",
+   "category": "grain",
+   "allergens": [
+    "gluten"
+   ],
+   "may_contain": [],
+   "aliases": []
+  },
+  {
+   "name": "pasta",
+   "category": "grain",
+   "allergens": [
+    "gluten"
+   ],
+   "may_contain": [
+    "egg"
+   ],
+   "aliases": []
+  },
+  {
+   "name": "noodles",
+   "category": "grain",
+   "allergens": [
+    "gluten"
+   ],
+   "may_contain": [
+    "egg"
+   ],
+   "aliases": []
+  },
+  {
+   "name": "ramen noodles",
+   "category": "grain",
+   "allergens": [
+    "gluten"
+   ],
+   "may_contain": [
+    "egg"
+   ],
+   "aliases": []
+  },
+  {
+   "name": "rice noodles",
+   "category": "grain",
+   "allergens": [],
+   "may_contain": [],
+   "aliases": []
+  },
+  {
+   "name": "dosa batter",
+   "category": "grain",
+   "allergens": [],
+   "may_contain": [],
+   "aliases": []
+  },
+  {
+   "name": "baking powder",
+   "category": "other",
+   "allergens": [],
+   "may_contain": [],
+   "aliases": []
+  },
+  {
+   "name": "sugar",
+   "category": "other",
+   "allergens": [],
+   "may_contain": [],
+   "aliases": []
+  },
+  {
+   "name": "honey",
+   "category": "other",
+   "allergens": [],
+   "may_contain": [],
+   "aliases": []
+  },
+  {
+   "name": "vanilla",
+   "category": "other",
+   "allergens": [],
+   "may_contain": [],
+   "aliases": []
+  },
+  {
+   "name": "carrot",
+   "category": "vegetable",
+   "allergens": [],
+   "may_contain": [],
+   "aliases": []
+  },
+  {
+   "name": "peas",
+   "category": "vegetable",
+   "allergens": [],
+   "may_contain": [],
+   "aliases": []
+  },
+  {
+   "name": "potato",
+   "category": "vegetable",
+   "allergens": [],
+   "may_contain": [],
+   "aliases": []
+  },
+  {
+   "name": "onion",
+   "category": "vegetable",
+   "allergens": [],
+   "may_contain": [],
+   "aliases": [
+    "red onion"
+   ]
+  },
+  {
+   "name": "spring onion",
+   "category": "vegetable",
+   "allergens": [],
+   "may_contain": [],
+   "aliases": []
+  },
+  {
+   "name": "garlic",
+   "category": "vegetable",
+   "allergens": [],
+   "may_contain": [],
+   "aliases": []
+  },
+  {
+   "name": "ginger",
+   "category": "vegetable",
+   "allergens": [],
+   "may_contain": [],
+   "aliases": []
+  },
+  {
+   "name": "tomato",
+   "category": "vegetable",
+   "allergens": [],
+   "may_contain": [],
+   "aliases": [
+    "tomatoes"
+   ]
+  },
+  {
+   "name": "cucumber",
+   "category": "vegetable",
+   "allergens": [],
+   "may_contain": [],
+   "aliases": []
+  },
+  {
+   "name": "bell pepper",
+   "category": "vegetable",
+   "allergens": [],
+   "may_contain": [],
+   "aliases": [
+    "bell peppers",
+    "red bell pepper"
+   ]
+  },
+  {
+   "name": "cabbage",
+   "category": "vegetable",
+   "allergens": [],
+   "may_contain": [],
+   "aliases": []
+  },
+  {
+   "name": "cauliflower",
+   "category": "vegetable",
+   "allergens": [],
+   "may_contain": [],
+   "aliases": []
+  },
+  {
+   "name": "broccoli",
+   "category": "vegetable",
+   "allergens": [],
+   "may_contain": [],
+   "aliases": []
+  },
+  {
+   "name": "spinach",
+   "category": "vegetable",
+   "allergens": [],
+   "may_contain": [],
+   "aliases": []
+  },
+  {
+   "name": "lettuce",
+   "category": "vegetable",
+   "allergens": [],
+   "may_contain": [],
+   "aliases": []
+  },
+  {
+   "name": "zucchini",
+   "category": "vegetable",
+   "allergens": [],
+   "may_contain": [],
+   "aliases": []
+  },
+  {
+   "name": "mushrooms",
+   "category": "vegetable",
+   "allergens": [],
+   "may_contain": [],
+   "aliases": []
+  },
+  {
+   "name": "corn",
+   "category": "vegetable",
+   "allergens": [],
+   "may_contain": [],
+   "aliases": []
+  },
+  {
+   "name": "bean sprouts",
+   "category": "vegetable",
+   "allergens": [],
+   "may_contain": [],
+   "aliases": []
+  },
+  {
+   "name": "olives",
+   "category": "vegetable",
+   "allergens": [],
+   "may_contain": [
+    "sulphites"
+   ],
+   "aliases": []
+  },
+  {
+   "name": "celery",
+   "category": "vegetable",
+   "allergens": [
+    "celery"
+   ],
+   "may_contain": [],
+   "aliases": []
+  },
+  {
+   "name": "nori",
+   "category": "vegetable",
+   "allergens": [],
+   "may_contain": [],
+   "aliases": []
+  },
+  {
+   "name": "beans",
+   "category": "legume",
+   "allergens": [],
+   "may_contain": [],
+   "aliases": []
+  },
+  {
+   "name": "black beans",
+   "category": "legume",
+   "allergens": [],
+   "may_contain": [],
+   "aliases": []
+  },
+  {
+   "name": "chickpeas",
+   "category": "legume",
+   "allergens": [],
+   "may_contain": [],
+   "aliases": [
+    "cooked chickpeas",
+    "soaked chickpeas"
+   ]
+  },
+  {
+   "name": "red lentils",
+   "category": "legume",
+   "allergens": [],
+   "may_contain": [],
+   "aliases": []
+  },
+  {
+   "name": "toor dal",
+   "category": "legume",
+   "allergens": [],
+   "may_contain": [],
+   "aliases": []
+  },
+  {
+   "name": "tofu",
+   "category": "protein",
+   "allergens": [
+    "soy"
+   ],
+   "may_contain": [],
+   "aliases": []
+  },
+  {
+   "name": "chicken",
+   "category": "protein",
+   "allergens": [],
+   "may_contain": [],
+   "aliases": [
+    "chicken breast"
+   ]
+  },
+  {
+   "name": "egg",
+   "category": "protein",
+   "allergens": [
+    "egg"
+   ],
+   "may_contain": [],
+   "aliases": [
+    "eggs"
+   ]
+  },
+  {
+   "name": "salmon",
+   "category": "protein",
+   "allergens": [
+    "fish"
+   ],
+   "may_contain": [],
+   "aliases": [
+    "salmon fillet"
+   ]
+  },
+  {
+   "name": "paneer",
+   "category": "dairy",
+   "allergens": [
+    "milk"
+   ],
+   "may_contain": [],
+   "aliases": []
+  },
+  {
+   "name": "milk",
+   "category": "dairy",
+   "allergens": [
+    "milk"
+   ],
+   "may_contain": [],
+   "aliases": []
+  },
+  {
+   "name": "cream",
+   "category": "dairy",
+   "allergens": [
+    "milk"
+   ],
+   "may_contain": [],
+   "aliases": []
+  },
+  {
+   "name": "butter",
+   "category": "dairy",
+   "allergens": [
+    "milk"
+   ],
+   "may_contain": [],
+   "aliases": []
+  },
+  {
+   "name": "ghee",
+   "category": "dairy",
+   "allergens": [
+    "milk"
+   ],
+   "may_contain": [],
+   "aliases": []
+  },
+  {
+   "name": "cheese",
+   "category": "dairy",
+   "allergens": [
+    "milk"
+   ],
+   "may_contain": [],
+   "aliases": []
+  },
+  {
+   "name": "mozzarella",
+   "category": "dairy",
+   "allergens": [
+    "milk"
+   ],
+   "may_contain": [],
+   "aliases": []
+  },
+  {
+   "name": "feta",
+   "category": "dairy",
+   "allergens": [
+    "milk"
+   ],
+   "may_contain": [],
+   "aliases": []
+  },
+  {
+   "name": "parmesan",
+   "category": "dairy",
+   "allergens": [
+    "milk"
+   ],
+   "may_contain": [],
+   "aliases": []
+  },
+  {
+   "name": "yogurt",
+   "category": "dairy",
+   "allergens": [
+    "milk"
+   ],
+   "may_contain": [],
+   "aliases": []
+  },
+  {
+   "name": "mayonnaise",
+   "category": "condiment",
+   "allergens": [
+    "egg"
+   ],
+   "may_contain": [
+    "mustard"
+   ],
+   "aliases": []
+  },
+  {
+   "name": "oil",
+   "category": "fat",
+   "allergens": [],
+   "may_contain": [],
+   "aliases": []
+  },
+  {
+   "name": "olive oil",
+   "category": "fat",
+   "allergens": [],
+   "may_contain": [],
+   "aliases": []
+  },
+  {
+   "name": "sesame oil",
+   "category": "fat",
+   "allergens": [
+    "sesame"
+   ],
+   "may_contain": [],
+   "aliases": []
+  },
+  {
+   "name": "peanut butter",
+   "category": "nut_seed",
+   "allergens": [
+    "peanut"
+   ],
+   "may_contain": [
+    "tree_nut"
+   ],
+   "aliases": []
+  },
+  {
+   "name": "peanuts",
+   "category": "nut_seed",
+   "allergens": [
+    "peanut"
+   ],
+   "may_contain": [
+    "tree_nut"
+   ],
+   "aliases": []
+  },
+  {
+   "name": "pine nuts",
+   "category": "nut_seed",
+   "allergens": [
+    "tree_nut"
+   ],
+   "may_contain": [],
+   "aliases": []
+  },
+  {
+   "name": "nuts",
+   "category": "nut_seed",
+   "allergens": [
+    "tree_nut"
+   ],
+   "may_contain": [
+    "peanut"
+   ],
+   "aliases": []
+  },
+  {
+   "name": "sesame seeds",
+   "category": "nut_seed",
+   "allergens": [
+    "sesame"
+   ],
+   "may_contain": [],
+   "aliases": []
+  },
+  {
+   "name": "tahini",
+   "category": "nut_seed",
+   "allergens": [
+    "sesame"
+   ],
+   "may_contain": [],
+   "aliases": []
+  },
+  {
+   "name": "soy sauce",
+   "category": "condiment",
+   "allergens": [
+    "soy",
+    "gluten"
+   ],
+   "may_contain": [],
+   "aliases": []
+  },
+  {
+   "name": "gochujang",
+   "category": "condiment",
+   "allergens": [
+    "soy"
+   ],
+   "may_contain": [
+    "gluten"
+   ],
+   "aliases": []
+  },
+  {
+   "name": "rice vinegar",
+   "category": "condiment",
+   "allergens": [],
+   "may_contain": [],
+   "aliases": []
+  },
+  {
+   "name": "tomato sauce",
+   "category": "condiment",
+   "allergens": [],
+   "may_contain": [],
+   "aliases": []
+  },
+  {
+   "name": "ginger-garlic paste",
+   "category": "condiment",
+   "allergens": [],
+   "may_contain": [],
+   "aliases": []
+  },
+  {
+   "name": "stock",
+   "category": "liquid",
+   "allergens": [],
+   "may_contain": [
+    "celery"
+   ],
+   "aliases": [
+    "broth",
+    "stock or water"
+   ]
+  },
+  {
+   "name": "vegetable stock",
+   "category": "liquid",
+   "allergens": [],
+   "may_contain": [
+    "celery"
+   ],
+   "aliases": []
+  },
+  {
+   "name": "chicken stock",
+   "category": "liquid",
+   "allergens": [],
+   "may_contain": [
+    "celery"
+   ],
+   "aliases": []
+  },
+  {
+   "name": "water",
+   "category": "liquid",
+   "allergens": [],
+   "may_contain": [],
+   "aliases": []
+  },
+  {
+   "name": "salt",
+   "category": "spice",
+   "allergens": [],
+   "may_contain": [],
+   "aliases": []
+  },
+  {
+   "name": "black pepper",
+   "category": "spice",
+   "allergens": [],
+   "may_contain": [],
+   "aliases": []
+  },
+  {
+   "name": "cumin",
+   "category": "spice",
+   "allergens": [],
+   "may_contain": [],
+   "aliases": []
+  },
+  {
+   "name": "turmeric",
+   "category": "spice",
+   "allergens": [],
+   "may_contain": [],
+   "aliases": []
+  },
+  {
+   "name": "paprika",
+   "category": "spice",
+   "allergens": [],
+   "may_contain": [],
+   "aliases": []
+  },
+  {
+   "name": "chili powder",
+   "category": "spice",
+   "allergens": [],
+   "may_contain": [],
+   "aliases": []
+  },
+  {
+   "name": "cinnamon",
+   "category": "spice",
+   "allergens": [],
+   "may_contain": [],
+   "aliases": []
+  },
+  {
+   "name": "coriander powder",
+   "category": "spice",
+   "allergens": [],
+   "may_contain": [],
+   "aliases": []
+  },
+  {
+   "name": "garam masala",
+   "category": "spice",
+   "allergens": [],
+   "may_contain": [],
+   "aliases": []
+  },
+  {
+   "name": "mustard seeds",
+   "category": "spice",
+   "allergens": [
+    "mustard"
+   ],
+   "may_contain": [],
+   "aliases": []
+  },
+  {
+   "name": "biryani spices",
+   "category": "spice",
+   "allergens": [],
+   "may_contain": [
+    "mustard",
+    "celery"
+   ],
+   "aliases": []
+  },
+  {
+   "name": "whole spices",
+   "category": "spice",
+   "allergens": [],
+   "may_contain": [],
+   "aliases": []
+  }
+ ],
+ "substitutions": [
+  {
+   "ingredient": "milk",
+   "removes_allergen": "milk",
+   "options": [
+    "oat milk",
+    "coconut milk"
+   ]
+  },
+  {
+   "ingredient": "butter",
+   "removes_allergen": "milk",
+   "options": [
+    "olive oil",
+    "dairy-free butter"
+   ]
+  },
+  {
+   "ingredient": "ghee",
+   "removes_allergen": "milk",
+   "options": [
+    "oil"
+   ]
+  },
+  {
+   "ingredient": "cream",
+   "removes_allergen": "milk",
+   "options": [
+    "coconut cream"
+   ]
+  },
+  {
+   "ingredient": "yogurt",
+   "removes_allergen": "milk",
+   "options": [
+    "coconut yogurt"
+   ]
+  },
+  {
+   "ingredient": "cheese",
+   "removes_allergen": "milk",
+   "options": [
+    "omit",
+    "dairy-free cheese"
+   ]
+  },
+  {
+   "ingredient": "mozzarella",
+   "removes_allergen": "milk",
+   "options": [
+    "omit",
+    "dairy-free cheese"
+   ]
+  },
+  {
+   "ingredient": "parmesan",
+   "removes_allergen": "milk",
+   "options": [
+    "omit",
+    "nutritional yeast"
+   ]
+  },
+  {
+   "ingredient": "feta",
+   "removes_allergen": "milk",
+   "options": [
+    "omit",
+    "olives"
+   ]
+  },
+  {
+   "ingredient": "soy sauce",
+   "removes_allergen": "soy",
+   "options": [
+    "coconut aminos"
+   ]
+  },
+  {
+   "ingredient": "soy sauce",
+   "removes_allergen": "gluten",
+   "options": [
+    "coconut aminos"
+   ]
+  },
+  {
+   "ingredient": "peanut butter",
+   "removes_allergen": "peanut",
+   "options": [
+    "sunflower seed butter"
+   ]
+  },
+  {
+   "ingredient": "peanuts",
+   "removes_allergen": "peanut",
+   "options": [
+    "sunflower seeds"
+   ]
+  },
+  {
+   "ingredient": "pine nuts",
+   "removes_allergen": "tree_nut",
+   "options": [
+    "sunflower seeds"
+   ]
+  },
+  {
+   "ingredient": "nuts",
+   "removes_allergen": "tree_nut",
+   "options": [
+    "sunflower seeds"
+   ]
+  },
+  {
+   "ingredient": "tahini",
+   "removes_allergen": "sesame",
+   "options": [
+    "sunflower seed butter"
+   ]
+  },
+  {
+   "ingredient": "sesame seeds",
+   "removes_allergen": "sesame",
+   "options": [
+    "omit",
+    "sunflower seeds"
+   ]
+  },
+  {
+   "ingredient": "sesame oil",
+   "removes_allergen": "sesame",
+   "options": [
+    "oil"
+   ]
+  },
+  {
+   "ingredient": "flour",
+   "removes_allergen": "gluten",
+   "options": [
+    "gluten-free flour blend"
+   ]
+  },
+  {
+   "ingredient": "pasta",
+   "removes_allergen": "gluten",
+   "options": [
+    "rice pasta"
+   ]
+  },
+  {
+   "ingredient": "noodles",
+   "removes_allergen": "gluten",
+   "options": [
+    "rice noodles"
+   ]
+  },
+  {
+   "ingredient": "mayonnaise",
+   "removes_allergen": "egg",
+   "options": [
+    "egg-free mayonnaise"
+   ]
+  },
+  {
+   "ingredient": "mustard seeds",
+   "removes_allergen": "mustard",
+   "options": [
+    "omit",
+    "cumin seeds"
+   ]
+  },
+  {
+   "ingredient": "celery",
+   "removes_allergen": "celery",
+   "options": [
+    "omit"
+   ]
+  }
+ ]
+}

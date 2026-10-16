@@ -1,0 +1,731 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,viewport-fit=cover"
+    />
+    <title>Savorelle | AI Recipe Generation from Your Ingredients</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Figtree:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/assets/styles.css?v=3" />
+  </head>
+  <body>
+    <header>
+      <div class="top">
+        <div style="display: flex; align-items: center; gap: 12px">
+          <div class="logo"><span class="w">S</span></div>
+          <div class="w wm">SAVORELLE</div>
+        </div>
+        <div class="mu up">AI Recipe Generation from Your Ingredients</div>
+        <div class="pal">
+          <span class="mu sm2">Palette</span
+          ><select
+            id="th"
+            aria-label="Palette"
+            style="width: auto; padding: 6px 10px; font-size: 13px"
+            onchange="pal(this.value)"
+          >
+            <option value="c">Dark</option>
+            <option value="b">Terracotta</option></select
+          ><button class="b sm" id="si" onclick="S.u ? out() : go('login')">
+            Sign in
+          </button>
+        </div>
+      </div>
+      <nav>
+        <button class="nv on" data-v="home">Home</button
+        ><button class="nv" data-v="home" data-section="services">
+          Services</button
+        ><button class="nv" data-v="scan">Scan food</button
+        ><button class="nv" data-v="pantry">Inventory</button
+        ><button class="nv" data-v="recipes">Recipes</button
+        ><button class="nv" data-v="lib">Saved and history</button
+        ><button class="nv" data-v="plan">Meal planner</button
+        ><button class="nv" data-v="shop">Shopping list</button
+        ><button class="nv" data-v="imp">YouTube import</button>
+      </nav>
+    </header>
+    <main>
+      <section class="v" id="home">
+        <div class="hero">
+          <div class="herobg"></div>
+          <div class="herot">
+            <div class="up n">Ingredients to recipe to Meal Planner</div>
+            <h1 style="margin-top: 12px">
+              Enter your ingredients. Get recipes you can cook tonight.
+            </h1>
+            <p class="lead">Explore Ingredients. Discover Possibilities.</p>
+            <div
+              style="
+                display: flex;
+                gap: 12px;
+                flex-wrap: wrap;
+                margin-bottom: 40px;
+              "
+            >
+              <button class="b p" onclick="go('scan')">Take a photo</button
+              ><button class="b" onclick="go('pantry')">
+                Enter ingredients instead
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="g2" style="margin-bottom: 44px">
+          <div>
+            <div class="up mu">About Savorelle</div>
+            <h3 style="margin: 8px 0 12px">
+              One workflow from ingredients to shopping list
+            </h3>
+            <div class="mu">
+              <p>
+                Add the ingredients you have by hand, then edit quantities so
+                recipes are matched against what is really in your kitchen.
+              </p>
+              <p>
+                From that inventory it generates recipes with ingredients,
+                preparation steps, instructions, time and difficulty, respects
+                your diet and allergies, and carries each choice through meal
+                planning to a shopping list of missing items.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div style="margin-bottom: 48px">
+          <div id="services">
+            <div class="up n">Services</div>
+            <h2>What Savorelle does for you</h2>
+            <div id="mods"></div>
+          </div>
+        </div>
+        <div class="g2">
+          <div>
+            <div class="up mu" style="margin-bottom: 8px">Start here</div>
+            <button class="act" onclick="go('scan')">
+              <span class="w n">01</span
+              ><span
+                ><span class="gr">Scan Food</span><br /><span class="mu"
+                  >Enter ingredients and quantities by hand.</span
+                ></span
+              >
+            </button>
+            <button class="act" onclick="go('imp')">
+              <span class="w n">02</span
+              ><span
+                ><span class="gr">Import YouTube Recipe</span><br /><span
+                  class="mu"
+                  >Pull ingredients and steps from a video link.</span
+                ></span
+              >
+            </button>
+            <button class="act" onclick="go('pantry')">
+              <span class="w n">03</span
+              ><span
+                ><span class="gr">Enter Ingredients</span><br /><span class="mu"
+                  >Type items with quantities and units.</span
+                ></span
+              >
+            </button>
+          </div>
+          <div class="pn">
+            <div class="up mu">Your session</div>
+            <div class="live"></div>
+          </div>
+        </div>
+        <div class="up2 g2">
+          <div>
+            <div class="up mu" style="margin-bottom: 8px">The pipeline</div>
+            <div class="st">
+              <b class="w n">1</b
+              ><span
+                ><span class="gr">Add</span>
+                <span class="mu"
+                  >Enter ingredients with quantities. Review or remove items
+                  before confirming them.</span
+                ></span
+              >
+            </div>
+            <div class="st">
+              <b class="w n">2</b
+              ><span
+                ><span class="gr">Generate</span>
+                <span class="mu"
+                  >Recipes are ranked by how much of each one your inventory
+                  already covers.</span
+                ></span
+              >
+            </div>
+            <div class="st">
+              <b class="w n">3</b
+              ><span
+                ><span class="gr">Schedule</span>
+                <span class="mu"
+                  >Assign any recipe to a day and meal in the weekly
+                  planner.</span
+                ></span
+              >
+            </div>
+            <div class="st">
+              <b class="w n">4</b
+              ><span
+                ><span class="gr">Compare</span>
+                <span class="mu"
+                  >Scheduled recipe quantities are checked against
+                  inventory.</span
+                ></span
+              >
+            </div>
+            <div class="st" style="border-bottom: 1px solid var(--ln)">
+              <b class="w n">5</b
+              ><span
+                ><span class="gr">Shop</span>
+                <span class="mu"
+                  >A list of missing items is produced. Mark them bought and
+                  inventory updates.</span
+                ></span
+              >
+            </div>
+          </div>
+        </div>
+        <p class="mu sm2" style="margin-top: 24px">
+          Prototype note: photo analysis requires a configured OpenAI API key;
+          without it, scanning reports that the service is unavailable instead
+          of showing guessed ingredients. Recipe generation and video
+          extraction remain simulated. Review all suggestions before use.
+        </p>
+      </section>
+
+      <section class="v" id="scan" hidden>
+        <h2>Scan food</h2>
+        <p class="mu">
+          Take a photo to get suggested ingredients, or add your ingredients
+          manually, then review them before adding them to your inventory.
+        </p>
+        <div class="pn" style="margin-bottom: 20px">
+          <div class="up mu">How to use this module</div>
+          <p class="mu sm2" style="margin: 8px 0 0">
+            Choose a photo to identify the dish and get ingredient suggestions,
+            or enter an ingredient, quantity and unit below. Review the list,
+            adjust quantities or remove items, then select Confirm to inventory.
+          </p>
+          <p class="mu sm2" style="margin: 8px 0 0">
+            When configured, photos are sent to OpenAI for analysis. Savorelle
+            does not store uploads. OpenAI's standard API abuse-monitoring logs
+            may retain submitted content for up to 30 days; API data is not used
+            to train models by default. Use may incur API charges on the server
+            operator's account. Selected allergies and foods to avoid
+            are used to withhold matching ingredient suggestions. Image analysis
+            cannot verify hidden ingredients or guarantee allergy safety.
+          </p>
+        </div>
+        <div class="g2">
+          <div class="pn">
+            <div class="up-box scan-photo" id="scan-drop">
+              <img id="pv" alt="Selected food" hidden />
+              <div id="fn" class="mu" style="margin-bottom: 12px">
+                No image selected
+              </div>
+              <label class="b p" for="file">Take a photo</label>
+              <input
+                id="file"
+                type="file"
+                accept="image/*"
+                capture="environment"
+                hidden
+              />
+              <p class="mu sm2" style="margin: 12px 0 0">
+                Or drag and drop a photo here.
+              </p>
+            </div>
+            <div class="up mu">Add manually</div>
+            <div class="rw">
+              <input
+                id="mn"
+                type="text"
+                placeholder="Ingredient"
+                style="flex: 1"
+              /><input
+                id="mq"
+                type="number"
+                min="0"
+                placeholder="Qty"
+                style="width: 80px"
+              /><select id="mu" style="width: 78px">
+                <option>g</option>
+                <option>ml</option>
+                <option>pc</option></select
+              ><button class="b" onclick="addDet()">Add</button>
+            </div>
+            <div class="up mu" style="margin-top: 24px">Allergies</div>
+            <p class="mu sm2">
+              Matching recipes are excluded from suggestions and listed with
+              their matching ingredients in recipe warnings. Name matching
+              cannot verify labels or guarantee food safety.
+            </p>
+            <div
+              class="al"
+              style="display: flex; gap: 8px; flex-wrap: wrap"
+            ></div>
+            <div class="rw">
+              <input
+                id="scan-av"
+                type="text"
+                placeholder="Add an allergy or food to avoid"
+                style="flex: 1"
+                onkeydown="
+                  if (event.key === 'Enter') {
+                    event.preventDefault();
+                    addAv('scan-av');
+                  }
+                "
+              /><button class="b" onclick="addAv('scan-av')">Add</button>
+            </div>
+          </div>
+          <div class="pn">
+            <h3>Detected ingredients</h3>
+            <p class="mu sm2">
+              Edit quantities, remove wrong items, then confirm.
+            </p>
+            <div id="det"></div>
+            <div
+              style="
+                display: flex;
+                gap: 10px;
+                margin-top: 16px;
+                flex-wrap: wrap;
+              "
+            >
+              <button class="b p" id="cf" onclick="conf()">
+                Confirm to inventory
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="v" id="pantry" hidden>
+        <h2>Ingredient inventory</h2>
+        <p class="mu">
+          Add, rename, adjust and remove. Quantities here drive recipe matching
+          and the shopping list.
+        </p>
+        <div class="pn">
+          <div class="rw" style="padding-top: 0">
+            <input
+              id="pn"
+              type="text"
+              placeholder="Ingredient"
+              style="flex: 1"
+            /><input
+              id="pq"
+              type="number"
+              min="0"
+              placeholder="Qty"
+              style="width: 90px"
+            /><select id="pu" style="width: 78px">
+              <option>g</option>
+              <option>ml</option>
+              <option>pc</option></select
+            ><button class="b p" onclick="addInv()">Add</button>
+          </div>
+          <div id="inv"></div>
+        </div>
+      </section>
+
+      <section class="v" id="recipes" hidden>
+        <h2>Recipe suggestions</h2>
+        <p class="mu">
+          Ranked by inventory coverage. Open any recipe to scale, customise,
+          save or schedule it.
+        </p>
+        <div class="pn">
+          <div class="gr" style="font-size: 28px">Create a recipe</div>
+          <p class="mu">
+            Start with ingredients you have entered. Your allergies are applied
+            to every recipe.
+          </p>
+          <div class="g2">
+            <div>
+              <div>
+                <div class="rw" style="padding-top: 0">
+                  <input
+                    id="cn"
+                    type="text"
+                    placeholder="Ingredient"
+                    style="flex: 1"
+                  /><input
+                    id="cq"
+                    type="number"
+                    min="0"
+                    placeholder="Qty"
+                    style="width: 80px"
+                  /><select id="cu" style="width: 78px">
+                    <option>g</option>
+                    <option>ml</option>
+                    <option>pc</option></select
+                  ><button class="b" onclick="addC()">Add</button>
+                </div>
+                <button
+                  class="b sm"
+                  onclick="
+                    S.cdet = S.inv.map((x) => ({ ...x }));
+                    draw();
+                  "
+                >
+                  Use my inventory
+                </button>
+              </div>
+              <div id="cl"></div>
+            </div>
+            <div>
+              <div class="up mu">Allergies and foods to avoid</div>
+              <div
+                class="al"
+                style="display: flex; gap: 8px; flex-wrap: wrap; margin: 10px 0"
+              ></div>
+              <div class="rw">
+                <input
+                  id="av"
+                  type="text"
+                  placeholder="Other ingredient to avoid"
+                  style="flex: 1"
+                /><button class="b" onclick="addAv()">Avoid</button>
+              </div>
+              <p class="mu sm2">
+                Matching uses ingredient names, so always read labels. Marked
+                ingredients are left out of generated recipes; matching recipes
+                are excluded and named in the allergy warning. Diet, time and
+                difficulty preferences below also apply.
+              </p>
+              <button class="b c" style="width: 100%" onclick="gen()">
+                Generate recipe
+              </button>
+              <p class="mu sm2" id="gm" style="margin-top: 12px"></p>
+              <p class="mu sm2">
+                Prototype: generation uses recipe templates. No live AI model is
+                connected yet.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="pn" style="margin-top: 20px">
+          <div class="up mu">Preferences</div>
+          <div class="fl">
+            <label
+              >Diet<select
+                id="fd"
+                onchange="
+                  S.f.diet = this.value;
+                  draw();
+                "
+              >
+                <option>Any</option>
+                <option>Vegetarian</option>
+                <option>Vegan</option>
+                <option>Non-vegetarian</option>
+                <option>High protein</option>
+              </select></label
+            ><label
+              >Cooking time<select
+                id="ft"
+                onchange="
+                  S.f.time = +this.value;
+                  draw();
+                "
+              >
+                <option value="0">Any</option>
+                <option value="20">Up to 20 min</option>
+                <option value="30">Up to 30 min</option>
+                <option value="45">Up to 45 min</option>
+              </select></label
+            ><label
+              >Difficulty<select
+                id="fy"
+                onchange="
+                  S.f.diff = this.value;
+                  draw();
+                "
+              >
+                <option>Any</option>
+                <option>Easy</option>
+                <option>Medium</option>
+              </select></label
+            >
+          </div>
+          <div id="rl"></div>
+          <p class="mu sm2" id="am" style="margin-top: 12px"></p>
+        </div>
+        <details class="pn" style="margin-top: 20px">
+          <summary class="gr">Browse the 50 sample recipes (read-only)</summary>
+          <p class="mu sm2">
+            These illustrative examples have no ingredient quantities or
+            verified nutrition. They are for browsing only and are not used in
+            recipe matching, meal planning or shopping.
+          </p>
+          <label class="mu sm2" for="sample-query">Search sample recipes</label>
+          <input
+            id="sample-query"
+            type="search"
+            placeholder="Search name, cuisine or ingredient"
+            oninput="filterSampleRecipes(this.value)"
+          />
+          <p class="mu sm2" id="sample-status" role="status"></p>
+          <div id="sample-recipes"></div>
+        </details>
+      </section>
+
+      <section class="v" id="lib" hidden>
+        <h2>Saved and history</h2>
+        <div class="tabs">
+          <button
+            class="b"
+            id="t1"
+            onclick="
+              S.tab = 'fav';
+              draw();
+            "
+          >
+            Saved recipes</button
+          ><button
+            class="b"
+            id="t2"
+            onclick="
+              S.tab = 'his';
+              draw();
+            "
+          >
+            Recipe history
+          </button>
+        </div>
+        <div class="pn" id="lt"></div>
+      </section>
+
+      <section class="v" id="plan" hidden>
+        <h2>Weekly meal planner</h2>
+        <p class="mu">
+          Assign a recipe to each day and meal. The week starts empty.
+        </p>
+        <div class="pn" style="margin-bottom: 20px">
+          <div class="rw" style="padding-top: 0; flex-wrap: wrap">
+            <div style="flex: 1; min-width: 200px">
+              <div class="gr">Calorie plan</div>
+              <div class="mu sm2">
+                Set a daily target. Strict mode blocks any meal that would push
+                a day over it. Values are per serving.
+              </div>
+            </div>
+            <input
+              type="number"
+              min="800"
+              step="50"
+              value="2000"
+              style="width: 100px"
+              onchange="
+                S.kc.t = Math.max(800, +this.value || 2000);
+                draw();
+              "
+            /><span class="mu">kcal per day</span
+            ><button
+              class="b"
+              id="ks"
+              onclick="
+                S.kc.strict = !S.kc.strict;
+                draw();
+              "
+            ></button
+            ><button class="b c" onclick="autoPlan()">Auto-plan week</button>
+          </div>
+        </div>
+        <div class="pg" id="pg"></div>
+        <div style="margin-top: 20px">
+          <button class="b c" onclick="go('shop')">
+            Check ingredients and build list
+          </button>
+        </div>
+      </section>
+
+      <section class="v" id="shop" hidden>
+        <h2>Missing ingredients and shopping list</h2>
+        <p class="mu" id="ss"></p>
+        <div class="pn">
+          <div id="sl"></div>
+          <div style="margin-top: 16px">
+            <button class="b p" onclick="stock()">
+              Add bought items to inventory
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="v" id="imp" hidden>
+        <h2>Import from YouTube</h2>
+        <p class="mu">
+          Paste a cooking video link. The extracted recipe joins your recipe
+          list and works with the planner and shopping list.
+        </p>
+        <div class="pn">
+          <div class="rw" style="padding-top: 0">
+            <input
+              id="yu"
+              type="text"
+              placeholder="https://www.youtube.com/watch?v=..."
+              style="flex: 1"
+            /><button class="b p" onclick="doImp()">Import</button>
+          </div>
+          <div id="io"></div>
+          <p class="mu sm2" style="margin-top: 12px">
+            Prototype: extraction is simulated from the video ID. No live
+            transcript service is connected yet.
+          </p>
+        </div>
+      </section>
+
+      <section class="v" id="login" hidden>
+        <h2>Your account</h2>
+        <p class="mu">
+          Sign in to keep your inventory, saved recipes, history and meal plans
+          with you.
+        </p>
+        <div class="g2">
+          <div class="pn">
+            <div class="tabs" style="margin-top: 0">
+              <button
+                class="b"
+                id="l1"
+                onclick="
+                  S.lm = 'in';
+                  draw();
+                "
+              >
+                Sign in</button
+              ><button
+                class="b"
+                id="l2"
+                onclick="
+                  S.lm = 'up';
+                  draw();
+                "
+              >
+                Create account
+              </button>
+            </div>
+            <div id="lnm">
+              <label class="mu sm2" style="display: block; margin: 12px 0 4px"
+                >Name</label
+              ><input id="ln" type="text" style="width: 100%" /><label
+                class="mu sm2"
+                style="display: block; margin: 12px 0 4px"
+                >Username</label
+              ><input
+                id="lu"
+                type="text"
+                style="width: 100%"
+                placeholder="Letters, numbers and underscores"
+              />
+            </div>
+            <label
+              id="lel"
+              class="mu sm2"
+              style="display: block; margin: 12px 0 4px"
+              >Email</label
+            ><input
+              id="le"
+              type="text"
+              style="width: 100%"
+              placeholder="you@example.com"
+            /><label class="mu sm2" style="display: block; margin: 12px 0 4px"
+              >Password</label
+            ><input
+              id="lpw"
+              type="password"
+              style="width: 100%"
+              placeholder="At least 8 characters"
+            />
+            <div id="lcp">
+              <label class="mu sm2" style="display: block; margin: 12px 0 4px"
+                >Confirm password</label
+              ><input id="lpc" type="password" style="width: 100%" />
+            </div>
+            <div class="rw" id="lck" style="border: 0">
+              <input type="checkbox" id="lc" /><span class="mu sm2"
+                >I accept the
+                <button
+                  style="
+                    background: none;
+                    border: 0;
+                    color: var(--s);
+                    text-decoration: underline;
+                    padding: 0;
+                  "
+                  onclick="go('terms')"
+                >
+                  Terms of use
+                </button>
+                and
+                <button
+                  style="
+                    background: none;
+                    border: 0;
+                    color: var(--s);
+                    text-decoration: underline;
+                    padding: 0;
+                  "
+                  onclick="go('priv')"
+                >
+                  Privacy policy</button
+                >.</span
+              >
+            </div>
+            <p
+              class="sm2"
+              id="lerr"
+              style="color: var(--c); min-height: 22px; margin: 6px 0"
+            ></p>
+            <button class="b p" id="lgo" style="width: 100%" onclick="auth()">
+              Sign in
+            </button>
+            <p class="mu sm2" style="margin-top: 12px">
+              Your account is stored by the Savorelle server. Passwords are
+              hashed, and your workspace is saved to your account when you sign
+              in.
+            </p>
+          </div>
+          <div class="pn">
+            <div class="up mu">With an account</div>
+            <div class="rw"><span class="gr">Inventory kept</span></div>
+            <p class="mu sm2">
+              Your ingredients and quantities stay with you between visits.
+            </p>
+            <div class="rw">
+              <span class="gr">Recipes and history kept</span>
+            </div>
+            <p class="mu sm2">
+              Saved recipes, recipes you opened and your customisations are
+              remembered.
+            </p>
+            <div class="rw"><span class="gr">Plans and targets kept</span></div>
+            <p class="mu sm2">
+              Your weekly plan, calorie target and allergy settings carry over.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="v" id="priv" hidden></section>
+      <section class="v" id="terms" hidden></section>
+    </main>
+    <footer>
+      <span>Savorelle · Internship project · Anurag IT Solutions Pvt. Ltd.</span
+      ><span
+        >Prototype build<button onclick="go('priv')">Privacy policy</button
+        ><button onclick="go('terms')">Terms of use</button></span
+      >
+    </footer>
+    <div id="dlg" hidden><div class="in"></div></div>
+    <div id="toast" class="toast"></div>
+    <script src="/assets/ingredient-matching.js?v=3"></script>
+    <script src="/assets/app.js?v=12"></script>
+  </body>
+</html>
